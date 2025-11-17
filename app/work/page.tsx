@@ -44,16 +44,23 @@ export default function WorkPage() {
               This section is password-protected. Please enter the password to continue.
             </p>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
               <input
+                id="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
                 className="bg-[#292929] border border-[#292929] text-[#EAEAEA] px-4 py-3 rounded focus:outline-none focus:border-[#777777] text-base"
                 autoFocus
+                aria-describedby={error ? "password-error" : undefined}
               />
               {error && (
-                <p className="text-sm text-[#EAEAEA]">{error}</p>
+                <p id="password-error" className="text-sm text-[#EAEAEA]" role="alert">
+                  {error}
+                </p>
               )}
               <button
                 type="submit"
@@ -103,21 +110,6 @@ export default function WorkPage() {
               <CustomLink href="/work/making-design-systems-suck-less" className="text-base leading-[1.6em]">
                 Making Design Systems Suck Less
               </CustomLink>
-              <CustomLink href="#" className="text-base leading-[1.6em]">
-                The System Is the Team
-              </CustomLink>
-              <CustomLink href="#" className="text-base leading-[1.6em]">
-                Rebuilding the Table That Runs the Product
-              </CustomLink>
-              <CustomLink href="#" className="text-base leading-[1.6em]">
-                Building a Solid Foundation for Design Work in Figma
-              </CustomLink>
-              <CustomLink href="#" className="text-base leading-[1.6em]">
-                Design System Newsletter
-              </CustomLink>
-              <CustomLink href="#" className="text-base leading-[1.6em]">
-                Measuring Design Work
-              </CustomLink>
             </div>
           </div>
 
@@ -135,9 +127,7 @@ export default function WorkPage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 w-full mt-4">
-              <CustomLink href="#" className="text-base leading-[1.6em]">
-                Designing with Tokens
-              </CustomLink>
+              {/* Posts coming soon */}
             </div>
           </div>
         </div>

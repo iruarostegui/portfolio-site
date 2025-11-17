@@ -21,7 +21,7 @@ export function ExperienceItem({ company, period, href }: ExperienceItemProps) {
     <div className="flex flex-row items-center w-full gap-3">
       {CompanyComponent}
       <div className="flex-1 h-px bg-[#292929]" />
-      <span className="text-sm leading-[1.4285714285714286em] text-[#EAEAEA] font-mono uppercase" style={{ fontWeight: 84 }}>
+      <span className="text-sm leading-[1.4285714285714286em] text-[#EAEAEA] font-mono uppercase font-thin">
         {period}
       </span>
     </div>

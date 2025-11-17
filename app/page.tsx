@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Section } from "@/components/Section"
 import { ExperienceItem } from "@/components/ExperienceItem"
 import { Footer } from "@/components/Footer"
@@ -68,13 +69,13 @@ export default function Home() {
           <Section 
             number="00. Work" 
             title={
-              <a 
+              <Link 
                 href="/work" 
                 className="text-sm leading-[1.4285714285714286em] text-[#EAEAEA] font-normal relative inline-block group"
               >
                 Portfolio
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-[#EAEAEA] transition-all duration-300 ease-in-out group-hover:w-full" />
-              </a>
+              </Link>
             }
           >
             <div className="flex flex-row items-center w-full gap-3">
@@ -106,7 +107,7 @@ export default function Home() {
           </Section>
 
           {/* 02. Writing Section */}
-          <Section number="02. Writing" title="">
+          <Section number="02. Writing">
             <div className="flex flex-col gap-3 w-full">
               <CustomLink href="https://medium.com/design-systems-collective/color-tokens-rework-323109ee96a2?source=user_profile_page---------0-------------ca40a8cf3da8----------------------" className="text-base leading-[1.6em]" external>
                 I tore down everything I knew about color tokens
@@ -121,7 +122,7 @@ export default function Home() {
           </Section>
 
           {/* 03. Contact Section */}
-          <Section number="03. Contact" title="">
+          <Section number="03. Contact">
             <div className="flex flex-col gap-3 w-full">
               <CustomLink href="https://x.com/iruNotFound" className="text-base leading-[1.6em]" external>
                 Twitter

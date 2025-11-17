@@ -36,7 +36,6 @@ export function CustomLink({ href, children, className, external = false }: Cust
     <Link
       href={href}
       className={cn(baseClasses, className)}
-      style={{ display: 'inline-block' }}
     >
       {linkContent}
     </Link>

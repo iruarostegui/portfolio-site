@@ -4,10 +4,9 @@ interface SectionProps {
   number: string
   title?: string | ReactNode
   children: ReactNode
-  titleAction?: ReactNode
 }
 
-export function Section({ number, title, children, titleAction }: SectionProps) {
+export function Section({ number, title, children }: SectionProps) {
   return (
     <div className="flex flex-col gap-4 w-full">
       <div className="flex flex-row items-center w-full gap-2">
@@ -15,11 +14,16 @@ export function Section({ number, title, children, titleAction }: SectionProps) 
           {number}
         </span>
         {title && (
-          <span className="text-sm leading-[1.4285714285714286em] text-[#EAEAEA] font-normal">
-            {title}
-          </span>
+          typeof title === 'string' ? (
+            <span className="text-sm leading-[1.4285714285714286em] text-[#EAEAEA] font-normal">
+              {title}
+            </span>
+          ) : (
+            <span className="text-sm leading-[1.4285714285714286em]">
+              {title}
+            </span>
+          )
         )}
-        {titleAction}
       </div>
       {children}
     </div>
