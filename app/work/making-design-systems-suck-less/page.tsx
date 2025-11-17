@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 import { CustomLink } from '@/components/Link'
 import { Footer } from '@/components/Footer'
 import { ImageLightbox } from '@/components/ImageLightbox'
