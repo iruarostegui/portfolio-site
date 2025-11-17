@@ -110,6 +110,12 @@ export default function WorkPage() {
               <CustomLink href="/work/making-design-systems-suck-less" className="text-base leading-[1.6em]">
                 Making Design Systems Suck Less
               </CustomLink>
+              <CustomLink href="/work/the-system-is-the-team" className="text-base leading-[1.6em]">
+                The System Is the Team
+              </CustomLink>
+              <CustomLink href="/work/rebuilding-the-table-that-runs-the-product" className="text-base leading-[1.6em]">
+                Rebuilding the Table That Runs the Product
+              </CustomLink>
             </div>
           </div>
 

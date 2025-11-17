@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { CustomLink } from '@/components/Link'
 import { Footer } from '@/components/Footer'
+import { ImageLightbox } from '@/components/ImageLightbox'
+import { ScrollToTop } from '@/components/ScrollToTop'
 
 export default function MakingDesignSystemsPage() {
   const router = useRouter()
@@ -43,7 +45,7 @@ export default function MakingDesignSystemsPage() {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col gap-12 w-full">
+        <div className="flex flex-col gap-24 w-full">
           {/* The Initial Chaos Section */}
           <div className="flex flex-col gap-6 w-full">
             <h2 className="text-2xl leading-[1.2em] text-[#EAEAEA] font-medium">
@@ -69,31 +71,31 @@ export default function MakingDesignSystemsPage() {
                 The problem: Data showed that designers frequently detached components and modified them instead of using the system as intended, worsening inconsistencies.
               </p>
               <div className="w-full my-4">
-                <Image
+                <ImageLightbox
                   src="/images/making-design-systems/image-1.svg"
                   alt="Design system adoption data"
                   width={879}
                   height={295}
-                  className="w-full h-auto"
+                  className="w-auto h-auto max-w-full"
                 />
               </div>
               <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
                 The fix: I led Figma training sessions to ensure designers fully adopted the system, reinforcing best practices to prevent detachment and misuse.
               </p>
               <div className="flex flex-col gap-4 w-full mt-4">
-                <Image
+                <ImageLightbox
                   src="/images/making-design-systems/image-2.svg"
                   alt="Figma training results"
                   width={879}
                   height={296}
-                  className="w-full h-auto"
+                  className="w-auto h-auto max-w-full"
                 />
-                <Image
+                <ImageLightbox
                   src="/images/making-design-systems/image-3.svg"
                   alt="Design system improvements"
                   width={879}
                   height={296}
-                  className="w-full h-auto"
+                  className="w-auto h-auto max-w-full"
                 />
               </div>
             </div>
@@ -124,17 +126,26 @@ export default function MakingDesignSystemsPage() {
                 The problem: Core design tokens—colors, typography, and spacing—were in constant flux. Colors changed at random, typography lacked a structured hierarchy, and spacing was an afterthought. Without a foundation, everything felt improvised, making scalability impossible.
               </p>
               <div className="w-full my-4">
-                <Image
+                <ImageLightbox
                   src="/images/making-design-systems/image-44.png"
                   alt="Design token system"
-                  width={848}
-                  height={820}
-                  className="w-full h-auto"
+                  width={424}
+                  height={410}
+                  className="w-auto h-auto max-w-full"
                 />
               </div>
               <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
                 The fix: I built a scalable design token system that locked down colors, defined clear typography styles, and introduced structured spacing rules. With a single source of truth, designers stopped guessing, devs stopped rewriting styles, and the entire team moved faster. (For a deeper dive, check out my Medium post: <CustomLink href="https://medium.com/@iruNotFound/scalable-color-systems-0fb1eb66c1ca" className="text-[#EAEAEA]" external>Color Mastery, A Guide to Scalable Color Systems</CustomLink>)
               </p>
+              <div className="w-full my-4">
+                <ImageLightbox
+                  src="/images/making-design-systems/image-518.png"
+                  alt="Design token system details"
+                  width={268}
+                  height={697}
+                  className="w-auto h-auto max-w-full"
+                />
+              </div>
             </div>
           </div>
 
@@ -147,6 +158,15 @@ export default function MakingDesignSystemsPage() {
               <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
                 The problem: All icons lived within a single component with countless variants, making selection tedious and inefficient. This issue extended beyond icons—logos and illustrations were also scattered and difficult to manage.
               </p>
+              <div className="w-full my-4">
+                <ImageLightbox
+                  src="/images/making-design-systems/image-519-17ccc0.png"
+                  alt="Scattered assets example"
+                  width={487}
+                  height={200}
+                  className="w-auto h-auto max-w-full"
+                />
+              </div>
               <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
                 The fix: I created a centralized assets library for icons, logos, and illustrations, ensuring they were structured, easy to find, and simple to maintain. By treating assets as reusable elements rather than scattered components, we streamlined selection and improved system-wide consistency.
               </p>
@@ -162,50 +182,37 @@ export default function MakingDesignSystemsPage() {
               <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
                 The problem: Component overengineering was everywhere. The card component alone had 26 variants, but it was just one example. Many components were bloated with unnecessary variations that could have been simplified using properties and structured configurations.
               </p>
-              <div className="w-full my-4">
-                <Image
-                  src="/images/making-design-systems/image-41-726b74.png"
-                  alt="Overcomplicated components"
-                  width={1724}
-                  height={158}
-                  className="w-full h-auto"
+              <div className="w-full my-4 overflow-x-auto">
+                <ImageLightbox
+                  src="/images/making-design-systems/overcomplicated-components.svg"
+                  alt="Overcomplicated components comparison"
+                  width={1440}
+                  height={129}
+                  className="w-full h-auto max-w-full"
                 />
               </div>
-              <div className="flex flex-col gap-4 w-full">
-                <Image
-                  src="/images/making-design-systems/image-42-57a138.png"
-                  alt="Component simplification"
-                  width={1724}
-                  height={424}
-                  className="w-full h-auto"
-                />
-                <Image
-                  src="/images/making-design-systems/image-43-19e48b.png"
-                  alt="Component structure"
-                  width={1726}
-                  height={158}
-                  className="w-full h-auto"
-                />
-                <Image
-                  src="/images/making-design-systems/image-45-6d9021.png"
-                  alt="Component refactoring"
-                  width={1724}
-                  height={422}
-                  className="w-full h-auto"
-                />
-                <Image
-                  src="/images/making-design-systems/image-46-2c2193.png"
-                  alt="Component optimization"
-                  width={1724}
-                  height={158}
-                  className="w-full h-auto"
-                />
-                <Image
-                  src="/images/making-design-systems/image-47-76bece.png"
-                  alt="Component improvements"
-                  width={1724}
-                  height={421}
-                  className="w-full h-auto"
+              <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
+                The fix: I consolidated redundant components using Figma properties, boolean controls, and strings, reducing complexity while maintaining flexibility.
+              </p>
+            </div>
+          </div>
+
+          {/* Poor Component Structure Section */}
+          <div className="flex flex-col gap-6 w-full">
+            <h3 className="text-xl leading-[1.2em] text-[#EAEAEA] font-medium">
+              Poor Component Structure
+            </h3>
+            <div className="flex flex-col gap-4 w-full">
+              <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
+                The problem: Poor component structure was widespread. Backgrounds were just plain rectangles instead of properly layered elements, but that was just one example. Many components lacked proper hierarchy, constraints, or nesting, making them difficult to maintain and scale.
+              </p>
+              <div className="w-full my-4">
+                <ImageLightbox
+                  src="/images/making-design-systems/image-518-poor-structure.png"
+                  alt="Poor component structure example"
+                  width={274}
+                  height={175}
+                  className="w-auto h-auto max-w-full"
                 />
               </div>
               <p className="text-base leading-[1.5em] text-[#EAEAEA] font-normal">
@@ -287,6 +294,7 @@ export default function MakingDesignSystemsPage() {
         {/* Footer */}
         <Footer />
       </div>
+      <ScrollToTop />
     </main>
   )
 }
