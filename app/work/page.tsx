@@ -116,6 +116,15 @@ export default function WorkPage() {
               <CustomLink href="/work/rebuilding-the-table-that-runs-the-product" className="text-base leading-[1.6em]">
                 Rebuilding the Table That Runs the Product
               </CustomLink>
+              <CustomLink href="/work/building-a-solid-foundation-for-design-work-in-figma" className="text-base leading-[1.6em]">
+                Building a Solid Foundation for Design Work in Figma
+              </CustomLink>
+              <CustomLink href="/work/design-system-newsletter" className="text-base leading-[1.6em]">
+                Design System Newsletter
+              </CustomLink>
+              <CustomLink href="/work/measuring-design-work" className="text-base leading-[1.6em]">
+                Measuring Design Work
+              </CustomLink>
             </div>
           </div>
 
@@ -133,7 +142,9 @@ export default function WorkPage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 w-full mt-4">
-              {/* Posts coming soon */}
+              <CustomLink href="/work/designing-with-tokens" className="text-base leading-[1.6em]">
+                Designing with Tokens
+              </CustomLink>
             </div>
           </div>
         </div>
